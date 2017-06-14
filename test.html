@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta charset="UTF-8">
+        <title>my page</title>
+<style>
+
+</style>
+    </head>
+    <body>
+<header>
+    <hgroup>
+        <h1>网站标题</h1>
+        <h1>网站副标题</h1>
+    </hgroup>
+</header>
+<canvas id="demoCanvas" width="500" height="300">
+        <p>请使用支持HTML5的浏览器查看本实例</p>
+    </canvas>
+    <!---下面将演示一种绘制矩形的demo--->
+    <script type="text/javascript">
+        //第一步：获取canvas元素
+        var canvasDom = document.getElementById("demoCanvas");
+        //第二步：获取上下文
+        var context = canvasDom.getContext('2d');
+        //第三步：指定绘制线样式、颜色
+        context.strokeStyle = "red";
+        //第四步：绘制矩形，只有线。内容是空的
+        context.strokeRect(10, 10, 190, 100);
+        //以下演示填充矩形。
+        context.fillStyle = "blue";
+        context.fillRect(110,110,100,100);
+    </script>
+<canvas id="demoCanvas1" width="500" height="400">
+    </canvas>
+    <script type="text/javascript">
+        //通过id获得当前的Canvas对象
+        var canvasDom = document.getElementById("demoCanvas1");
+        //通过Canvas Dom对象获取Context的对象
+        var context = canvasDom.getContext("2d");
+        context.beginPath(); // 开始路径绘制
+        context.moveTo(20, 20); // 设置路径起点，坐标为(20,20)
+        context.lineTo(200, 200); // 绘制一条到(200,20)的直线
+        context.lineTo(400, 20);
+        context.closePath();
+        context.lineWidth = 2.0; // 设置线宽
+        context.strokeStyle = "#CC0000"; // 设置线的颜色
+        context.stroke(); // 进行线的着色，这时整条线才变得可见
+    </script>
+<nav>
+    <ul>
+        <li>厚德IT</li>
+        <li>FlyDragon</li>
+        <li>J飞龙天惊</li>
+    </ul>
+</nav>
+
+<section>
+    <h1>section是什么？</h1>
+    <h2>一个新章节</h2>
+    <article>
+        <h2>关于section</h2>
+        <p>section的介绍</p>
+<fieldset>
+    <legend>表单演示：最新Opera浏览器支持效果良好</legend>
+    <form action="" method="POST" id="form1" oninput="output.value=parseInt(range.value)">
+        <input type="text" autofocus="autofocus" required pattern="\d+" name="auto" placeholder="必填项测试" />
+        <input type="number" name="demoNumber" min="1" max="100" step="2" />
+        <input type="email" placeholder="请输入邮箱" name="mail" />
+        <input type="url" name="url" placeholder="输入正确的网址" />
+        <br />
+            日期：<input type="datetime" name="time" />
+            颜色：<input type="color" name="color" /><br />
+        <br />
+        <input type="range" min="0" max="50" step="5" name="range" value="0" />
+        <output name="output">0</output>
+        <br />
+        <input type="submit" value="提交表单" />
+    </form>
+    表单外的input标签：
+    <input type="text" form="form1" name="demo" />
+</fieldset>
+
+    </article>
+</section>
+
+
+
+<aside>
+    <h1>作者简介</h1>
+    <p>厚德IT</p>
+</aside>
+
+        <footer>footer</footer>
+    </body>
+</html>
